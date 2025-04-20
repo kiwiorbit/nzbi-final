@@ -1,4 +1,4 @@
-# New Zealand Board of Imams (NZBI) Website
+# New Zealand Board of Imams (NZBI) Website nzbinz.vercel.app
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deployed-brightgreen)](https://yourusername.github.io/nzbi-website/)
 
