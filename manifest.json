@@ -1,0 +1,21 @@
+{
+  "name": "New Zealand Board of Imams",
+  "short_name": "NZBI",
+  "description": "The official website of the New Zealand Board of Imams, providing Islamic guidance and services to the Muslim community in New Zealand.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4f46e5",
+  "icons": [
+    {
+      "src": "./images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

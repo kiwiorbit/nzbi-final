@@ -1,0 +1,942 @@
+@import 'tailwindcss';
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('./fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --primary-color: #6366f1;
+  --primary-dark: #4f46e5;
+  --primary-light: #a5b4fc;
+  --accent-color: #5656ab;
+  --bg-body:#222028;
+  --bg-dark:#131414;
+  --bg-darkblue:#1a2741;
+  --bg-light: #f3f4f6;
+
+  --glass-bg: rgba(255, 255, 255, 0.116);
+  --glass-shadow: 0 8px 32px 0 rgba(100, 101, 118, 0.385);
+  --card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.157), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+
+  --gradient-primary: linear-gradient(135deg, #6366f1, #8b5cf6);
+  --gradient-secondary: linear-gradient(135deg, #10b9b0, #3b82f6);
+  --gradient-bw:linear-gradient(135deg, #1f1f1f92, #66656578);
+
+  --foreground: var(--text-dark);
+  --primary: var(--primary-color);
+  --secondary: var(--secondary-color);
+  --font-sans: 'Poppins', sans-serif;
+  --font-mono: 'Poppins', monospace;
+  --font-arabic: 'Amiri', serif;
+  --font-arabic-alt: 'Lateef', serif;
+  --text-dark: #1f2937;
+  --text-light: #f9fafb;
+}
+
+body {
+  background: var(--bg-body);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Arabic text styles */
+.arabic {
+  font-family: var(--font-arabic), serif;
+  direction: rtl;
+}
+
+.arabic-lateef {
+  font-family: var(--font-arabic-alt), serif;
+  direction: rtl;
+}
+
+/* Apply Poppins to all text by default */
+.text-content {
+  font-family: var(--font-sans), sans-serif;
+}
+
+.hero-content {
+  padding-top: 10rem;
+}
+
+/* Modern heading style */
+.heading-decorated {
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--text-dark);
+}
+
+.heading-decorated::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+}
+
+.heading-decorated-light {
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+  display: inline-block;
+}
+
+.heading-decorated-light::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+}
+
+.bg-light {
+  background: var(--bg-light);
+}
+
+/* Modern tiny dots pattern background */
+.islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.12'%3E%3Ccircle cx='1' cy='1' r='0.5'/%3E%3Ccircle cx='4' cy='1' r='0.5'/%3E%3Ccircle cx='7' cy='1' r='0.5'/%3E%3Ccircle cx='10' cy='1' r='0.5'/%3E%3Ccircle cx='2.5' cy='3.5' r='0.5'/%3E%3Ccircle cx='5.5' cy='3.5' r='0.5'/%3E%3Ccircle cx='8.5' cy='3.5' r='0.5'/%3E%3Ccircle cx='1' cy='6' r='0.5'/%3E%3Ccircle cx='4' cy='6' r='0.5'/%3E%3Ccircle cx='7' cy='6' r='0.5'/%3E%3Ccircle cx='10' cy='6' r='0.5'/%3E%3Ccircle cx='2.5' cy='8.5' r='0.5'/%3E%3Ccircle cx='5.5' cy='8.5' r='0.5'/%3E%3Ccircle cx='8.5' cy='8.5' r='0.5'/%3E%3Ccircle cx='1' cy='11' r='0.5'/%3E%3Ccircle cx='4' cy='11' r='0.5'/%3E%3Ccircle cx='7' cy='11' r='0.5'/%3E%3Ccircle cx='10' cy='11' r='0.5'/%3E%3C/g%3E%3C/svg%3E");
+  background-color: #3b3b6e;
+  background-size: 20px 20px;
+}
+
+/* Glass morphism */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: var(--glass-shadow);
+  border-radius: 0.5rem;
+}
+
+.glass-card-dark {
+  background: transparent;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.375);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 0.5rem;
+}
+
+/* Footer specific styles */
+footer.glass-card-dark {
+  margin-top: 0;
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+  background-color: rgba(21, 28, 43, 0.9);
+}
+
+/* Navbar */
+.navbar-dark {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar-light {
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: var(--card-shadow);
+}
+
+/* Glass Navbar */
+.navbar-glass {
+  background-color: rgba(255, 255, 255, 0.962);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  color: var(--text-dark);
+  height: 4rem; /* Fixed height for header */
+}
+
+/* Scrolled state for navbar */
+.navbar-glass.scrolled {
+  background-color: rgba(255, 255, 255, 0.613);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease-out;
+}
+
+.animate-pulse {
+  animation: pulse 2s infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--card-shadow);
+}
+
+/* Button styles */
+
+.btn-primary {
+  background: var(--gradient-primary);
+  color: var(--text-light);
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 6px -1px rgba(70, 70, 70, 0.1);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-primary:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgba(54, 53, 53, 0.103);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-primary:hover:before {
+  width: 100%;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-light);
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+  border: 2px solid var(--bg-light);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-secondary:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.192);
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.btn-secondary:hover:before {
+  width: 100%;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+}
+
+
+.btn-outline {
+  background: transparent;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  background: var(--gradient-primary);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Prayer and Moonsighting Status Card */
+.prayer-moon-status {
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(99, 101, 241, 0.697);
+  box-shadow: var(--glass-shadow);
+}
+
+.prayer-moon-status:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Interactive tabs card */
+.interactive-tabs-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(99, 101, 241, 0.2);
+  position: relative;
+  z-index: 1;
+}
+
+.interactive-tabs-card:hover {
+  transform: translateY(-10px) rotate(1deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-color: rgba(99, 101, 241, 0.5);
+}
+
+.interactive-tabs-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(99, 101, 241, 0.05) 0%, rgba(255, 255, 255, 0) 100%);
+  z-index: -1;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+
+.interactive-tabs-card:hover::before {
+  opacity: 1;
+}
+
+.interactive-tabs-card .card-header {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.interactive-tabs-card .card-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  opacity: 0.2;
+}
+
+.interactive-tabs-card .card-body {
+  padding: 1.5rem;
+}
+
+.interactive-tabs-card .card-footer {
+  padding: 1.5rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(249, 250, 251, 0.8);
+}
+
+.interactive-tabs-card .tab-header {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.interactive-tabs-card .tab {
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.interactive-tabs-card .tab.active {
+  color: #6366f1;
+  border-bottom: 2px solid #6366f1;
+}
+
+.interactive-tabs-card .tab:hover:not(.active) {
+  color: #4f46e5;
+  background: rgba(99, 102, 241, 0.05);
+}
+
+/* Welcome card styles */
+.welcome-card {
+  transition: all 0.3s ease;
+}
+
+.flex-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-card:hover {
+  box-shadow: 8px 8px 0 0 rgb(117, 117, 117) !important;
+  border-color: #000000;
+}
+
+/* Moon positioning */
+.moon-bg-position {
+  position: absolute;
+  top: 16rem; /* -top-10 */
+  right: -7rem; /* -right-20 */
+}
+
+@media (min-width: 640px) {
+  .moon-bg-position {
+    top: -10rem; /* -top-40 */
+    right: -5rem; /* -right-20 */
+  }
+}
+
+/* Navigation link styles */
+.nav-link {
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-link:hover {
+  color: var(--primary-dark);
+}
+
+/* Ensure all navigation items are vertically centered */
+nav a {
+  display: flex;
+  align-items: center;
+}
+
+
+/* RTL Typing effect */
+.rtl-typing-container {
+  display: inline-block;
+  text-align: right;
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+
+.typing-cursor {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+  margin-right: 2px;
+  color: var(--primary-light);
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* FAQ Accordion Styling */
+.faq-accordion .faq-item {
+  background: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  color: var(--text-dark);
+}
+
+.faq-accordion .faq-item:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.faq-accordion .faq-item button:focus {
+  outline: none;
+}
+
+.faq-accordion .faq-item button:hover {
+  color: var(--primary-color);
+}
+
+/* Hadith styling */
+.hadith-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.hadith-container::before {
+  content: '"';
+  font-family: var(--font-arabic);
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 1;
+}
+
+.hadith-container::after {
+  content: '"';
+  font-family: var(--font-arabic);
+  position: absolute;
+  bottom: -60px;
+  left: 10px;
+  font-size: 8rem;
+  color: rgba(255, 255, 255, 0.05);
+  line-height: 1;
+}
+
+/* Announcement Styling */
+.announcement-banner {
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.announcement-card {
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.announcement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.announcement-card .p-6 {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.announcement-card .mt-4 {
+  margin-top: auto;
+}
+
+.event-box {
+  background: var(--gradient-primary);
+}
+
+.event-card {
+  transition: all 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+}
+
+
+
+/* Enhanced Card styles */
+.glass-card-dark {
+  background: rgba(21, 28, 43, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card-dark:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* .prayer-moon-status {
+  background: rgb(255, 255, 255);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1.5px solid rgba(255, 255, 255, 0.36);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+} */
+
+/* Enhanced Heading styles */
+.heading-decorated {
+  position: relative;
+  padding-bottom: 1rem;
+  font-weight: 700;
+  color: var(--text-dark);
+  display: inline-block;
+}
+
+.heading-decorated::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: var(--gradient-primary);
+  border-radius: 4px;
+}
+
+
+/* Enhanced hover effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--card-shadow);
+}
+
+/* Enhanced announcement cards */
+.announcement-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.announcement-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* News popup modal styles */
+#news-popup-modal {
+  transition: opacity 0.3s ease;
+}
+
+#news-popup-modal img {
+  transition: all 0.3s ease;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+/* Enhanced event cards */
+.event-box {
+  background: var(--gradient-primary);
+}
+
+/* Moon background positioning */
+.moon-bg-position {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Counter-specific styles */
+.counter {
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  border: none;
+  border-radius: 0.75rem;
+  color: white;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
+  background: transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover effect for counters */
+.counter:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Apply gradient background using pseudo-element instead of directly on the counter */
+.counter::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(53, 51, 59, 0.688);
+  z-index: -1;
+  border-radius: 0.75rem;
+  transition: background 0.5s ease;
+}
+
+.counter:hover::before {
+  background: linear-gradient(225deg, #4f46e5, #a5b4fc, #c8b2dd, #8b5cf6);
+  background-size: 400% 400%;
+  animation: gradientAnimation 5s ease infinite;
+  opacity: 0.5;
+}
+
+/* Animation for the gradient background */
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Float animation */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* TypewriterRTL cursor animation */
+@keyframes cursor-blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typing-cursor {
+  display: inline-block;
+  animation: cursor-blink 1s step-end infinite;
+  margin-right: 2px;
+}
+
+/* Prophet Guidance Section */
+.prophet-guidance-section {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Moon phases background animation */
+.moon-phases-bg {
+  animation: subtle-float 5s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes subtle-float {
+  0% {
+    transform: scale(1.0) translate(0, 0);
+  }
+  50% {
+    transform: scale(1.05) translate(-5px, -5px);
+  }
+  100% {
+    transform: scale(1.1) translate(5px, -10px);
+  }
+}
+
+.hadith-container {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.202);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.2));
+}
+
+.hadith-container:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+  transform: translateY(-5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Fade-in animation */
+.animate-fadeIn {
+  animation: fadeIn 1.5s ease forwards;
+  opacity: 1 !important; /* Ensure opacity is set to 1 */
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Popup animations */
+@keyframes popup-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes popup-out {
+  from {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+}
+
+@keyframes image-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoom-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-popup-in {
+  animation: popup-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+.animate-popup-out {
+  animation: popup-out 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards;
+}
+
+#popup-news-image.animate-fadeIn {
+  animation: image-fade-in 0.5s ease forwards;
+}
+
+.animate-fade-in {
+  animation: image-fade-in 0.5s ease forwards;
+}
+
+.animate-zoom-in {
+  animation: zoom-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+/* Fullscreen image viewer */
+#fullscreen-image-viewer {
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+#fullscreen-image {
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  max-width: 95vw;
+  max-height: 90vh;
+  cursor: zoom-out;
+}
+
+/* Default styles for hadith elements */
+#hadith-translation, #hadith-citation, #hadith-description {
+  transition: opacity 1.5s ease, transform 1.5s ease;
+}
+
+/* Arabic text styling */
+.arabic {
+  font-family: 'Lateef', 'Amiri', serif;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  direction: rtl;
+  text-align: center;
+  font-size: 5rem; /* Doubled from original 2rem */
+  color: var(--primary-light, #a5b4fc);
+  margin: 1rem 0;
+  text-shadow: 0 0 15px rgba(165, 180, 252, 0.5), 0 0 30px rgba(99, 102, 241, 0.3);
+}

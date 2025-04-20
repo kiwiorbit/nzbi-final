@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements - New Zealand Board of Imams | Latest Updates</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Stay updated with the latest announcements, news, and important information from the New Zealand Board of Imams. Find official statements, event notifications, and community updates.">
+    <meta name="keywords" content="announcements, news, updates, New Zealand Board of Imams, NZBI, Islamic authority, Muslim community, New Zealand, official statements">
+    <meta name="author" content="New Zealand Board of Imams">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourusername.github.io/nzbiv2/announcements.html">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/nzbiv2/announcements.html">
+    <meta property="og:title" content="Announcements - New Zealand Board of Imams | Latest Updates">
+    <meta property="og:description" content="Stay updated with the latest announcements, news, and important information from the New Zealand Board of Imams. Find official statements, event notifications, and community updates.">
+    <meta property="og:image" content="https://yourusername.github.io/nzbiv2/images/logo.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://yourusername.github.io/nzbiv2/announcements.html">
+    <meta name="twitter:title" content="Announcements - New Zealand Board of Imams | Latest Updates">
+    <meta name="twitter:description" content="Stay updated with the latest announcements, news, and important information from the New Zealand Board of Imams. Find official statements, event notifications, and community updates.">
+    <meta name="twitter:image" content="https://yourusername.github.io/nzbiv2/images/logo.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <link rel="apple-touch-icon" href="./images/logo.png">
+
+    <!-- Google Fonts - Poppins for English, Amiri and Lateef for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-color': 'var(--primary-color)',
+                        'primary-dark': 'var(--primary-dark)',
+                        'primary-light': 'var(--primary-light)',
+                        'accent-color': 'var(--accent-color)',
+                        'bg-dark': 'var(--bg-dark)',
+                        'bg-light': 'var(--bg-light)'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                        'arabic': ['Amiri', 'serif'],
+                        'arabic-alt': ['Lateef', 'serif']
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'fadeIn': 'fadeIn 0.5s ease-in-out',
+                        'slideUp': 'slideUp 0.5s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar-glass fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md">
+      <div class="container mx-auto px-4 h-16 flex justify-between items-center">
+        <div class="flex items-center">
+          <a href="./" class="flex items-center">
+            <img src="./images/newlogo.png" alt="New Zealand Board of Imams" width="72" height="20" class="h-auto">
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-1">
+          <a href="./" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Home</a>
+          <a href="./about.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">About Us</a>
+          <a href="./imam.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Imams</a>
+          <a href="./moonsighting.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Moonsighting</a>
+          <a href="./announcements.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Announcements</a>
+          <a href="./contact.html" class="btn-primary ml-2 text-sm font-semibold flex items-center h-10 justify-center">Contact Us</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden focus:outline-none text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+          <nav class="flex flex-col space-y-3">
+            <a href="./" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Home</a>
+            <a href="./about.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">About Us</a>
+            <a href="./imam.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Imams</a>
+            <a href="./moonsighting.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Moonsighting</a>
+            <a href="./announcements.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Announcements</a>
+            <a href="./contact.html" class="btn-primary mt-2 text-sm font-semibold flex items-center h-10 justify-center">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="flex-grow mt-16 mb-0">
+        <!-- Page Header -->
+        <section class="relative py-20 bg-gradient-to-r from-primary-dark to-primary-color text-white">
+            <div class="absolute inset-0 z-0 opacity-60 islamic-pattern"></div>
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-slideUp opacity-0" style="animation-delay: 0.1s; animation-fill-mode: forwards;">Announcements</h1>
+                    <p class="text-xl max-w-3xl mx-auto animate-slideUp opacity-0" style="animation-delay: 0.3s; animation-fill-mode: forwards;">
+                        Stay updated with the latest news, events, and announcements from the New Zealand Board of Imams
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Announcements Section -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <!-- Announcements post section -->
+                    <div class="mb-16">
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <!-- Announcement Card 1 -->
+                            <div class="announcement-card group bg-white rounded-xl overflow-hidden shadow-lg"
+                                data-title="New Prayer Timetable for April 2025"
+                                data-author="NZBI Admin"
+                                data-timestamp="2025-02-15T09:00:00"
+                                data-image="./images/prayer_timetable_042025.png"
+                                data-content="Check out the latest prayer timetable for April 2025 and plan your prayers accordingly.\n\nThe New Zealand Board of Imams is pleased to release the prayer timetable for April 2025. This timetable has been carefully calculated based on astronomical data and follows the standards approved by the board.\n\nThe timetable includes prayer times for all major cities in New Zealand, including Auckland, Wellington, Christchurch, and Dunedin. It also includes sunrise and sunset times, as well as the beginning and end of the Islamic day.\n\nYou can download the timetable from our website or pick up a printed copy from your local mosque. The timetable is also available as a mobile app for both Android and iOS devices.\n\nIf you have any questions or need further information, please contact us at info@nzbi.org.">
+                                <div class="relative overflow-hidden h-56">
+                                    <img src="./images/prayer_timetable_042025.png" alt="NZBI Welcomes New Board Members" class="object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                                    <div class="absolute bottom-4 left-4">
+                                        <div class="flex items-center text-white text-sm">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                            </svg>
+                                            February 15, 2025
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-3">New Prayer Timetable for April 2025</h3>
+                                    <p class="text-gray-600 mb-4">Check out the latest prayer timetable for April 2025 and plan your prayers accordingly.</p>
+                                    <div class="mt-2">
+                                        <button class="text-primary-color font-medium hover:underline inline-flex items-center group">
+                                            Read Full Announcement
+                                            <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Announcement Card 2 -->
+                            <div class="announcement-card group bg-white rounded-xl overflow-hidden shadow-lg"
+                                data-title="Islamic Education Workshop Series"
+                                data-author="Education Committee"
+                                data-timestamp="2025-01-28T14:30:00"
+                                data-image="./images/hole.jpg"
+                                data-content="Join our educational workshop series on various Islamic topics, including Quranic studies, hadith, fiqh, and contemporary issues facing Muslims.\n\nThe New Zealand Board of Imams is proud to announce a comprehensive educational workshop series designed to deepen understanding of Islamic knowledge across various disciplines. These workshops will be conducted by qualified scholars and educators from both New Zealand and abroad.\n\nWorkshop Schedule:\n- February 5: Introduction to Quranic Sciences\n- February 12: Principles of Hadith Authentication\n- February 19: Fundamentals of Islamic Jurisprudence\n- February 26: Contemporary Fiqh Issues in Western Societies\n\nAll workshops will be held at the Auckland Islamic Education Center from 6:30 PM to 8:30 PM. Registration is required as spaces are limited. A certificate of completion will be provided to participants who attend all sessions.\n\nTo register, please visit our website or contact the education coordinator at education@nzbi.org.">
+                                <div class="relative overflow-hidden h-56">
+                                    <img src="./images/hole.jpg" alt="Islamic Education Workshop Series" class="object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+
+                                    <div class="absolute bottom-4 left-4">
+                                        <div class="flex items-center text-white text-sm">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                            </svg>
+                                            January 28, 2025
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-3">Islamic Education Workshop Series</h3>
+                                    <p class="text-gray-600 mb-4">Join our educational workshop series on various Islamic topics, including Quranic studies, hadith, fiqh, and contemporary issues facing Muslims.</p>
+                                    <div class="mt-2">
+                                        <button class="text-primary-color font-medium hover:underline inline-flex items-center group">
+                                            Read Full Announcement
+                                            <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Announcement Card 3 -->
+                            <div class="announcement-card group bg-white rounded-xl overflow-hidden shadow-lg"
+                                data-title="Lunar Observation Workshop"
+                                data-author="Moonsighting Committee"
+                                data-timestamp="2025-01-10T10:15:00"
+                                data-image="./images/moon.jpeg"
+                                data-content="Join our educational workshop on lunar observation techniques and Islamic calendar calculations. Learn how to spot the crescent moon.\n\nThe New Zealand Board of Imams Moonsighting Committee is organizing a special workshop focused on lunar observation techniques and Islamic calendar calculations. This hands-on workshop will provide participants with both theoretical knowledge and practical skills for crescent moon sighting.\n\nTopics covered will include:\n- Islamic calendar systems and calculations\n- Astronomical considerations for crescent visibility\n- Using optical aids for moonsighting\n- Recording and reporting observations\n- Historical methods of lunar calendar determination\n\nThe workshop will be held at Mount Victoria Lookout on January 20, 2025, from 4:00 PM until after sunset. Telescopes and binoculars will be provided, but participants are welcome to bring their own equipment.\n\nThis workshop is suitable for all ages and experience levels. Children under 12 must be accompanied by an adult. In case of inclement weather, the theoretical portion will still be held at the Islamic Center, with the practical observation rescheduled.\n\nRegistration is required. Please email moonsighting@nzbi.org to secure your place.">
+                                <div class="relative overflow-hidden h-56">
+                                    <img src="./images/moon.jpeg" alt="Lunar Observation Workshop" class="object-cover transition-transform duration-700 group-hover:scale-110 w-full h-full">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                                    <div class="absolute bottom-4 left-4">
+                                        <div class="flex items-center text-white text-sm">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                            </svg>
+                                            January 10, 2025
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold mb-3">Lunar Observation Workshop</h3>
+                                    <p class="text-gray-600 mb-4">Join our educational workshop on lunar observation techniques and Islamic calendar calculations. Learn how to spot the crescent moon.</p>
+                                    <div class="mt-2">
+                                        <button class="text-primary-color font-medium hover:underline inline-flex items-center group">
+                                            Read Full Announcement
+                                            <svg class="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Events Section -->
+                    <div>
+                        <h2 class="text-3xl font-bold mb-10 text-center heading-decorated">Upcoming Events</h2>
+                        <div class="max-w-5xl mx-auto">
+                            <!-- Event Card 1 -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-8 hover:shadow-xl transition-shadow duration-300 group">
+                                <div class="flex flex-col md:flex-row">
+                                    <div class="bg-gradient-to-br from-primary-color to-primary-dark text-white p-8 flex flex-col items-center justify-center md:w-1/4 relative overflow-hidden">
+                                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                        <span class="text-4xl font-bold relative z-10">11</span>
+                                        <span class="text-xl relative z-10">April</span>
+                                        <span class="relative z-10">2025</span>
+                                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-white/10 rounded-full"></div>
+                                    </div>
+                                    <div class="p-8 md:w-3/4">
+                                        <div class="flex justify-between items-start mb-4">
+                                            <h3 class="text-2xl font-bold group-hover:text-primary-color transition-colors">Eid al-Fitr Prayer</h3>
+                                            <span class="bg-primary-color/10 text-primary-color text-xs font-medium px-3 py-1 rounded-full">Community</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6">Join us for Eid al-Fitr prayer at Auckland Domain. Bring your family and friends to celebrate this blessed day together.</p>
+                                        <div class="flex flex-wrap items-center text-sm text-gray-500 gap-y-2">
+                                            <div class="flex items-center mr-6">
+                                                <span class="inline-block mr-2 text-primary-color">⏰</span>
+                                                <span>8:30 AM - 10:00 AM</span>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <span class="inline-block mr-2 text-primary-color">📍</span>
+                                                <span>Auckland Domain</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event Card 2 -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-8 hover:shadow-xl transition-shadow duration-300 group">
+                                <div class="flex flex-col md:flex-row">
+                                    <div class="bg-gradient-to-br from-primary-color to-primary-dark text-white p-8 flex flex-col items-center justify-center md:w-1/4 relative overflow-hidden">
+                                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                        <span class="text-4xl font-bold relative z-10">15</span>
+                                        <span class="text-xl relative z-10">April</span>
+                                        <span class="relative z-10">2025</span>
+                                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-white/10 rounded-full"></div>
+                                    </div>
+                                    <div class="p-8 md:w-3/4">
+                                        <div class="flex justify-between items-start mb-4">
+                                            <h3 class="text-2xl font-bold group-hover:text-primary-color transition-colors">Ramadan Reflections</h3>
+                                            <span class="bg-blue-100 text-blue-700 text-xs font-medium px-3 py-1 rounded-full">Lecture</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6">A special lecture on the lessons and blessings of Ramadan and how to maintain spiritual momentum after the holy month.</p>
+                                        <div class="flex flex-wrap items-center text-sm text-gray-500 gap-y-2">
+                                            <div class="flex items-center mr-6">
+                                                <span class="inline-block mr-2 text-primary-color">⏰</span>
+                                                <span>7:00 PM - 8:30 PM</span>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <span class="inline-block mr-2 text-primary-color">📍</span>
+                                                <span>Auckland Islamic Center</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event Card 3 -->
+                            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-8 hover:shadow-xl transition-shadow duration-300 group">
+                                <div class="flex flex-col md:flex-row">
+                                    <div class="bg-gradient-to-br from-primary-color to-primary-dark text-white p-8 flex flex-col items-center justify-center md:w-1/4 relative overflow-hidden">
+                                        <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                        <span class="text-4xl font-bold relative z-10">22</span>
+                                        <span class="text-xl relative z-10">April</span>
+                                        <span class="relative z-10">2025</span>
+                                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-white/10 rounded-full"></div>
+                                    </div>
+                                    <div class="p-8 md:w-3/4">
+                                        <div class="flex justify-between items-start mb-4">
+                                            <h3 class="text-2xl font-bold group-hover:text-primary-color transition-colors">Community Service Day</h3>
+                                            <span class="bg-green-100 text-green-700 text-xs font-medium px-3 py-1 rounded-full">Volunteer</span>
+                                        </div>
+                                        <p class="text-gray-600 mb-6">Join us for a day of community service as we help clean local parks and distribute food to those in need.</p>
+                                        <div class="flex flex-wrap items-center text-sm text-gray-500 gap-y-2">
+                                            <div class="flex items-center mr-6">
+                                                <span class="inline-block mr-2 text-primary-color">⏰</span>
+                                                <span>9:00 AM - 2:00 PM</span>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <span class="inline-block mr-2 text-primary-color">📍</span>
+                                                <span>Western Springs Park</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-10">
+                                <a href="./events.html" class="btn-primary hover-lift inline-flex items-center group mx-auto w-full sm:w-auto justify-center">
+                                    View All Events
+                                    <span class="ml-2 transition-transform group-hover:translate-x-1 inline-block">→</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section py-24 bg-gradient-to-br from-primary-dark to-accent-color text-white relative overflow-hidden">
+            <!-- Decorative elements -->
+            <div class="absolute inset-0 z-0">
+                <img src="./images/quranpage.jpg" alt="Background" class="object-cover object-center w-full h-full">
+
+                <!-- Islamic pattern overlay -->
+                <div class="absolute inset-0 islamic-pattern opacity-80"></div>
+
+                <!-- Gradient overlay for brand colors -->
+                <div class="absolute inset-0 bg-black opacity-60"></div>
+            </div>
+            <div class="absolute -top-24 -right-24 w-96 h-96 bg-white/5 rounded-full"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 bg-white/5 rounded-full"></div>
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <span class="inline-block px-4 py-1 bg-white/10 rounded-full text-white/90 font-medium mb-6">Get Involved</span>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Join Our Community</h2>
+                <p class="text-xl mb-12 max-w-3xl mx-auto">Support the work of the New Zealand Board of Imams through volunteering or donations.</p>
+                <div class="flex flex-col sm:flex-row gap-6 justify-center">
+                    <a href="./contact.html" class="bg-white text-primary-dark hover:bg-white/90 px-8 py-4 rounded-lg font-medium transition-all hover:shadow-lg hover:-translate-y-1 inline-flex items-center justify-center group mx-auto sm:mx-0 w-full sm:w-auto">
+                        <span>Get Involved</span>
+                    </a>
+                    <a href="./contact.html#donate" class="bg-transparent border-2 border-white hover:bg-white/10 px-8 py-4 rounded-lg font-medium transition-all hover:shadow-lg hover:-translate-y-1 inline-flex items-center justify-center group mx-auto sm:mx-0 w-full sm:w-auto">
+
+                        <span>Donate</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card-dark text-white">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">New Zealand Board of Imams</h3>
+            <p class="mb-4">Serving the Muslim community in New Zealand with guidance, support, and Islamic knowledge.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white hover:text-primary-light transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" class="text-white hover:text-primary-light transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" class="text-white hover:text-primary-light transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li><a href="./" class="text-white hover:text-primary-light transition-colors">Home</a></li>
+              <li><a href="./about.html" class="text-white hover:text-primary-light transition-colors">About Us</a></li>
+              <li><a href="./imams.html" class="text-white hover:text-primary-light transition-colors">Meet the Imams</a></li>
+              <li><a href="./announcements.html" class="text-white hover:text-primary-light transition-colors">Announcements</a></li>
+              <li><a href="./events.html" class="text-white hover:text-primary-light transition-colors">Events</a></li>
+              <li><a href="./contact.html" class="text-white hover:text-primary-light transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Resources</h3>
+            <ul class="space-y-2">
+              <li><a href="./moonsighting.html" class="text-white hover:text-primary-light transition-colors">Moonsighting</a></li>
+              <li><a href="./prayer-times.html" class="text-white hover:text-primary-light transition-colors">Prayer Times</a></li>
+              <li><a href="./calendar.html" class="text-white hover:text-primary-light transition-colors">Islamic Calendar</a></li>
+              <li><a href="./resources.html" class="text-white hover:text-primary-light transition-colors">Resources</a></li>
+              <li><a href="./faq.html" class="text-white hover:text-primary-light transition-colors">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg class="w-6 h-6 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span>Auckland, New Zealand</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <span>moonsightingnz@gmail.com</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                <span>+64 123 456 789</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm opacity-70">
+          <p>&copy; <span id="current-year"></span> New Zealand Board of Imams. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- News Popup Modal -->
+    <div id="news-popup-modal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden p-4">
+        <div class="bg-white rounded-lg p-0 max-w-4xl mx-auto shadow-xl border border-gray-200 w-full md:w-4/5 max-h-[90vh] flex flex-col overflow-hidden">
+            <!-- Header with close button -->
+            <div class="flex justify-between items-center p-6 border-b border-gray-200">
+                <h3 id="popup-news-title" class="text-2xl font-semibold text-gray-800 pr-4">News Title</h3>
+                <button id="close-news-popup" class="text-gray-500 hover:text-gray-700 transition duration-300">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Scrollable content area -->
+            <div class="overflow-y-auto p-6 flex-grow overscroll-contain">
+                <!-- News metadata -->
+                <div class="mb-4">
+                    <p id="popup-news-meta" class="text-gray-500 text-sm">Posted by Admin • Just now</p>
+                </div>
+
+                <!-- News image (if any) -->
+                <div id="popup-news-image-container" class="mb-6 hidden">
+                    <div class="rounded-lg overflow-hidden border border-gray-200 flex justify-center bg-gray-50 relative">
+                        <img id="popup-news-image" src="" alt="News image" class="w-auto h-auto max-w-full max-h-[70vh] object-contain cursor-pointer hover:opacity-90 transition-opacity" title="Click to view full size">
+                    </div>
+                </div>
+
+                <!-- News content -->
+                <div id="popup-news-content" class="prose prose-indigo max-w-none text-gray-700">
+                    <!-- Content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Full Screen Image Viewer -->
+    <div id="fullscreen-image-viewer" class="fixed inset-0 bg-black bg-opacity-90 z-[60] hidden items-center justify-center p-4">
+        <button id="close-fullscreen-viewer" class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+        </button>
+        <img id="fullscreen-image" src="" alt="Full screen image" class="max-w-[95%] max-h-[90vh] object-contain animate-fade-in cursor-zoom-out">
+    </div>
+
+    <!-- JavaScript files -->
+    <script src="./main.js?v=1.2.0"></script>
+</body>
+</html>

@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moonsighting - New Zealand Board of Imams | Islamic Lunar Calendar</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Official moonsighting information and announcements for Islamic months in New Zealand. Get updates on Ramadan, Eid, and other Islamic months based on lunar observations.">
+    <meta name="keywords" content="moonsighting, New Zealand, Islamic calendar, lunar calendar, Ramadan, Eid, crescent moon, hilal, New Zealand Board of Imams, NZBI">
+    <meta name="author" content="New Zealand Board of Imams">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://yourusername.github.io/nzbiv2/moonsighting.html">
+
+    <!-- Open Graph / Facebook Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/nzbiv2/moonsighting.html">
+    <meta property="og:title" content="Moonsighting - New Zealand Board of Imams | Islamic Lunar Calendar">
+    <meta property="og:description" content="Official moonsighting information and announcements for Islamic months in New Zealand. Get updates on Ramadan, Eid, and other Islamic months based on lunar observations.">
+    <meta property="og:image" content="https://yourusername.github.io/nzbiv2/images/moon.jpeg">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://yourusername.github.io/nzbiv2/moonsighting.html">
+    <meta name="twitter:title" content="Moonsighting - New Zealand Board of Imams | Islamic Lunar Calendar">
+    <meta name="twitter:description" content="Official moonsighting information and announcements for Islamic months in New Zealand. Get updates on Ramadan, Eid, and other Islamic months based on lunar observations.">
+    <meta name="twitter:image" content="https://yourusername.github.io/nzbiv2/images/moon.jpeg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./images/logo.png">
+    <link rel="apple-touch-icon" href="./images/logo.png">
+
+    <!-- Google Fonts - Poppins for English, Amiri and Lateef for Arabic -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-color': 'var(--primary-color)',
+                        'primary-dark': 'var(--primary-dark)',
+                        'primary-light': 'var(--primary-light)',
+                        'accent-color': 'var(--accent-color)',
+                        'bg-dark': 'var(--bg-dark)',
+                        'bg-light': 'var(--bg-light)'
+                    },
+                    fontFamily: {
+                        'sans': ['Poppins', 'sans-serif'],
+                        'arabic': ['Amiri', 'serif'],
+                        'arabic-alt': ['Lateef', 'serif']
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                        'fadeIn': 'fadeIn 0.5s ease-in-out',
+                        'slideUp': 'slideUp 0.5s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar-glass fixed top-0 left-0 right-0 z-50 transition-all duration-300 backdrop-blur-md">
+      <div class="container mx-auto px-4 h-16 flex justify-between items-center">
+        <div class="flex items-center">
+          <a href="./" class="flex items-center">
+            <img src="./images/newlogo.png" alt="New Zealand Board of Imams" width="72" height="20" class="h-auto">
+          </a>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-1">
+          <a href="./" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Home</a>
+          <a href="./about.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">About Us</a>
+          <a href="./imam.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Imams</a>
+          <a href="./moonsighting.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Moonsighting</a>
+          <a href="./announcements.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Announcements</a>
+          <a href="./contact.html" class="btn-primary ml-2 text-sm font-semibold flex items-center h-10 justify-center">Contact Us</a>
+        </nav>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-button" class="md:hidden focus:outline-none text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path id="menu-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-gray-200 shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+          <nav class="flex flex-col space-y-3">
+            <a href="./" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Home</a>
+            <a href="./about.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">About Us</a>
+            <a href="./imam.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Imams</a>
+            <a href="./moonsighting.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Moonsighting</a>
+            <a href="./announcements.html" class="px-3 py-2 nav-link text-sm font-semibold flex items-center h-10">Announcements</a>
+            <a href="./contact.html" class="btn-primary mt-2 text-sm font-semibold flex items-center h-10 justify-center">Contact Us</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="flex-grow mt-16 mb-0">
+        <!-- Page Header -->
+        <section class="relative py-20 bg-gradient-to-r from-primary-dark to-primary-color text-white">
+            <div class="absolute inset-0 z-0 opacity-60 islamic-pattern"></div>
+            <div class="absolute inset-0 bg-black opacity-60"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-slideUp opacity-0" style="animation-delay: 0.1s; animation-fill-mode: forwards;">Moonsighting</h1>
+                    <p class="text-xl max-w-3xl mx-auto animate-slideUp opacity-0" style="animation-delay: 0.3s; animation-fill-mode: forwards;">
+                        Official moonsighting information and announcements for Islamic months in New Zealand
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guidance from the Prophet -->
+        <section class="prophet-guidance-section py-16 relative overflow-hidden">
+            <!-- Moon phases background image with overlay -->
+            <div class="absolute inset-0 z-0">
+                <div class="relative w-full h-full overflow-hidden">
+                    <img src="./images/moon phases.jpg" alt="Moon Phases" class="absolute w-full h-full object-cover opacity-20 moon-phases-bg">
+                    <!-- Gradient overlay -->
+                    <div class="absolute inset-0 bg-gradient-to-b from-black/30 to-black/10"></div>
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="bg-black/10 backdrop-blur-sm rounded-2xl p-2 py-12 hadith-container">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-6 text-white heading-decorated-light inline-block">Guidance from the Prophet</h2>
+
+                        <div class="mb-8 mt-10">
+                            <div class="mb-8">
+                                <div id="hadith-arabic" class="text-primary-light leading-loose arabic" style="min-height: 120px;"></div>
+                            </div>
+                            <p id="hadith-translation" class="text-xl text-white/90 italic mb-4" style="opacity: 0; transform: translateY(10px);">
+                                "Observe fast when you see it (the new moon) and break fast when you see it (the new moon of Shawwal), but when (the actual position of the month is) concealed from you (on account of cloudy sky), then count thirty days."
+                            </p>
+                            <p id="hadith-citation" class="text-white/70" style="opacity: 0; transform: translateY(10px);">
+                                — Sahih Muslim
+                            </p>
+                        </div>
+
+                        <div class="w-16 h-1 bg-primary-light mx-auto my-8 rounded-full"></div>
+
+                        <p id="hadith-description" class="text-white/80" style="opacity: 0; transform: translateY(10px);">
+                            This authentic hadith establishes the Islamic principle of moonsighting, guiding Muslims to begin and end Ramadan based on the physical sighting of the crescent moon, with a clear contingency plan when visibility is poor.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Moonsighting Status -->
+        <section class="py-16 relative overflow-hidden" style="background-color: #0E0E0E;">
+            <!-- Moon image in background -->
+            <div class="absolute inset-0 z-0">
+                <div class="relative w-full h-full overflow-hidden">
+                    <img src="./images/moon.jpeg" alt="Moon" class="moon-bg-position">
+                </div>
+            </div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl mx-auto">
+                    <div class="glass-card-dark text-white p-8 rounded-2xl">
+                        <h2 class="text-3xl font-bold mb-8 text-center">Current Moonsighting Status</h2>
+
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-12 mb-10">
+                            <div class="text-center">
+                                <div class="flex items-center justify-center mb-6 animate-float">
+                                    <div class="w-40 h-40 rounded-full bg-gray-200 flex items-center justify-center">
+                                        <div class="w-36 h-36 rounded-full bg-white flex items-center justify-center relative overflow-hidden">
+                                            <div class="absolute w-36 h-36 rounded-full bg-gray-800 right-0" style="transform: translateX(50%);"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-2">Ramadan 1446</h3>
+                                <p class="text-lg mb-2">Moon phase: First Quarter</p>
+                                <p>The moon was sighted on Tuesday, 9 April 2025</p>
+                            </div>
+
+                            <div class="bg-white/10 p-6 rounded-xl">
+                                <h3 class="text-xl font-bold mb-4">Official Announcement</h3>
+                                <p class="mb-4">
+                                    The New Zealand Board of Imams confirms that the crescent moon for Ramadan 1446 has been sighted in New Zealand. The first day of Ramadan will be Wednesday, 10 April 2025.
+                                </p>
+                                <p class="mb-4">
+                                    The Board wishes all Muslims a blessed Ramadan. May Allah accept our fasting, prayers, and good deeds.
+                                </p>
+                                <div class="text-right">
+                                    <p class="font-arabic text-2xl mb-2">رمضان مبارك</p>
+                                    <p class="text-sm">Ramadan Mubarak</p>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Moonsighting Method -->
+        <section id="moonsighting-method" class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-10 text-center heading-decorated">Our Moonsighting Method</h2>
+
+                    <div class="bg-white p-8 rounded-xl shadow-lg mb-12">
+                        <p class="text-lg mb-6 text-gray-700 leading-relaxed">
+                            The New Zealand Board of Imams follows the traditional method of moonsighting to determine the beginning and end of Islamic months. This involves the physical sighting of the crescent moon (hilal) with the naked eye.
+                        </p>
+                        <p class="text-lg mb-6 text-gray-700 leading-relaxed">
+                            Our approach is based on the hadith of the Prophet Muhammad (peace be upon him): "Fast when you see it (the crescent) and break your fast when you see it. If it is cloudy, then complete thirty days of Sha'ban." (Bukhari and Muslim)
+                        </p>
+                        <p class="text-lg text-gray-700 leading-relaxed">
+                            We coordinate with mosques and Islamic centers across New Zealand to gather moonsighting reports, which are then verified by the Board before an official announcement is made.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover-lift">
+                            <h3 class="text-xl font-bold mb-4">Moonsighting Criteria</h3>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 mr-2 text-primary-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>The crescent must be sighted after sunset</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 mr-2 text-primary-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>The sighting must be with the naked eye</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 mr-2 text-primary-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>The sighting must be verified by at least two reliable witnesses</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 mr-2 text-primary-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                    </svg>
+                                    <span>If the moon is not sighted, the month is completed as 30 days</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-xl shadow-lg hover-lift">
+                            <h3 class="text-xl font-bold mb-4">Reporting a Sighting</h3>
+                            <p class="mb-4 text-gray-700">
+                                If you sight the crescent moon, please report it to your local mosque or directly to the New Zealand Board of Imams using the following contact information:
+                            </p>
+                            <ul class="space-y-3 text-gray-700">
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 mr-2 text-primary-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                    </svg>
+                                    <span>Email: moonsightingnz@gmail.com</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <svg class="w-6 h-6 mr-2 text-primary-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                    </svg>
+                                    <span>Phone: +64 123 456 789</span>
+                                </li>
+                            </ul>
+                            <div class="mt-6">
+                                <a href="./contact.html" class="btn-primary">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Upcoming Islamic Months -->
+                    <h3 class="text-2xl font-bold mb-6 text-center">Upcoming Islamic Months</h3>
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full bg-white rounded-xl shadow-lg">
+                            <thead>
+                                <tr class="bg-primary-color text-white">
+                                    <th class="py-3 px-4 text-left">Islamic Month</th>
+                                    <th class="py-3 px-4 text-left">Expected Start Date</th>
+                                    <th class="py-3 px-4 text-left">Moonsighting Date</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-gray-200">
+                                <tr>
+                                    <td class="py-3 px-4">Shawwal 1446</td>
+                                    <td class="py-3 px-4">10 May 2025</td>
+                                    <td class="py-3 px-4">9 May 2025</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Dhul Qa'dah 1446</td>
+                                    <td class="py-3 px-4">8 June 2025</td>
+                                    <td class="py-3 px-4">7 June 2025</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Dhul Hijjah 1446</td>
+                                    <td class="py-3 px-4">8 July 2025</td>
+                                    <td class="py-3 px-4">7 July 2025</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-3 px-4">Muharram 1447</td>
+                                    <td class="py-3 px-4">7 August 2025</td>
+                                    <td class="py-3 px-4">6 August 2025</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-4 text-center">
+                        * These dates are approximate and subject to change based on the actual sighting of the crescent moon.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <h2 class="text-3xl font-bold mb-10 text-center heading-decorated">Frequently Asked Questions</h2>
+
+                    <div class="faq-accordion space-y-4" id="faq-accordion">
+                        <!-- FAQ Item 1 -->
+                        <div class="faq-item mb-4 rounded-xl overflow-hidden transition-all duration-300 shadow border-transparent" data-faq-index="0">
+                            <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center bg-white hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="faq-content-0">
+                                <span class="pr-8">Can we use calculation to determine the start of Ramadhan or Eid?</span>
+                                <span class="faq-icon flex-shrink-0">
+                                    <svg class="w-6 h-6 transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="faq-content-0" class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-gray-50" style="max-height: 0; opacity: 0; transition: max-height 0.3s ease, opacity 0.3s ease;">
+                                <div class="p-5 border-t border-gray-100">
+                                    <p class="text-gray-700">
+                                        Our beloved Prophet Muhammad (Peace Be Upon Him) has instructed us to look for the moon. As a Muslim, we must follow his instruction. <strong>Allah knows best.</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 2 -->
+                        <div class="faq-item mb-4 rounded-xl overflow-hidden transition-all duration-300 shadow border-transparent" data-faq-index="1">
+                            <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center bg-white hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="faq-content-1">
+                                <span class="pr-8">Is it correct to follow local sighting only?</span>
+                                <span class="faq-icon flex-shrink-0">
+                                    <svg class="w-6 h-6 transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="faq-content-1" class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-gray-50" style="max-height: 0; opacity: 0; transition: max-height 0.3s ease, opacity 0.3s ease;">
+                                <div class="p-5 border-t border-gray-100">
+                                    <p class="text-gray-700">
+                                        There is <span style="text-decoration:underline"><strong>no</strong></span> Hadeeth that limit moonsighting to local sighting only. Therefore, the majority of scholars believe that fasting or Eid should begin once the moon is sighted. In the interest of unity among the Muslim Ummah, we strongly suggest that New Zealand should coordinate with countries that share the same nights in both summer and winter. This will allow us to join with hundreds of millions of Muslims around the world in celebrating Ramadan and Eid. <strong>Allah knows best.</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 3 -->
+                        <div class="faq-item mb-4 rounded-xl overflow-hidden transition-all duration-300 shadow border-transparent" data-faq-index="2">
+                            <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center bg-white hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="faq-content-2">
+                                <span class="pr-8">What is the current method of moonsighting in New Zealand?</span>
+                                <span class="faq-icon flex-shrink-0">
+                                    <svg class="w-6 h-6 transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="faq-content-2" class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-gray-50" style="max-height: 0; opacity: 0; transition: max-height 0.3s ease, opacity 0.3s ease;">
+                                <div class="p-5 border-t border-gray-100">
+                                    <p class="text-gray-700">
+                                        Currently, the sighting of the moon for the start of Islamic months is determined by local sightings, with Fiji Islands and Saudi Arabia being included in the process. In the past, when the moon was sighted in Fiji, New Zealand may choose <strong>not to</strong> follow suit.
+                                    </p>
+                                    <p class="text-gray-700 mt-2">
+                                        In 2023, the month of <strong>Dhu'l-Qi'dah was only 29 days long</strong>, as it has been adjusted to ensure that Eid-ul-Adha is not celebrated more than 2 days apart from Saudi (Makkah). To clarify, the moon was not sighted, but 1st Dhul-Hijjah was announced anyway as if the moon was sighted. This led to another organization announcing Eid the following day. <strong>(Updated 16th June 2024 to correct the typo mistake)</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 4 -->
+                        <div class="faq-item mb-4 rounded-xl overflow-hidden transition-all duration-300 shadow border-transparent" data-faq-index="3">
+                            <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center bg-white hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="faq-content-3">
+                                <span class="pr-8">Hanafi school</span>
+                                <span class="faq-icon flex-shrink-0">
+                                    <svg class="w-6 h-6 transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="faq-content-3" class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-gray-50" style="max-height: 0; opacity: 0; transition: max-height 0.3s ease, opacity 0.3s ease;">
+                                <div class="p-5 border-t border-gray-100">
+                                    <p class="text-gray-700">
+                                        The sighting of the crescent by the Muslims in east of the world is sighting for the Muslims in the west. They do not consider differences in distance. (Addurarulmukhtar Waraddulmuhtaar 2/ 131 to 1321). (Maraaqilfalaah P 109)
+                                    </p>
+                                    <p class="text-gray-700 mt-2">
+                                        <span style="text-decoration:underline"><em>Reference</em></span><em> :</em>
+                                    </p>
+                                    <ol class="list-decimal pl-5 mt-2 text-gray-700">
+                                        <li>Hashiyah Raddul Muhtaar; Volume 2, Page 131-132, 392</li>
+                                        <li>Fath Al Qadeer Ibnu Humaam; Volume 2, Page 243</li>
+                                        <li>Maraqi Al Falah; Page 109</li>
+                                        <li>Tabeen Al Haqaaiq; Volume 1, Page 321</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 5 -->
+                        <div class="faq-item mb-4 rounded-xl overflow-hidden transition-all duration-300 shadow border-transparent" data-faq-index="4">
+                            <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center bg-white hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="faq-content-4">
+                                <span class="pr-8">Maaliki school</span>
+                                <span class="faq-icon flex-shrink-0">
+                                    <svg class="w-6 h-6 transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="faq-content-4" class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-gray-50" style="max-height: 0; opacity: 0; transition: max-height 0.3s ease, opacity 0.3s ease;">
+                                <div class="p-5 border-t border-gray-100">
+                                    <p class="text-gray-700">
+                                        If the crescent is sighted anywhere then, the entire Muslims should fast if they get the message that the moon was sighted by two or group who are trust worthy, regardless of the proximity or distance. (Asharhulkabir 1/ 510). (Bidaayatulmujtahid 1/278) (Alqawaanninulfiqhiyyah P117).
+                                    </p>
+                                    <p class="text-gray-700 mt-2">
+                                        <span style="text-decoration:underline"><em>Reference</em></span> :
+                                    </p>
+                                    <ol class="list-decimal pl-5 mt-2 text-gray-700">
+                                        <li>Tamheed Ibn Abdul Barr; Volume 7, Page 159</li>
+                                        <li>Al Muntaqaa; Volume 2, Page 37</li>
+                                        <li>Al Sharh Al Kabir; Volume 1, Page 510</li>
+                                        <li>Bidayatul Mujtahid; Volume 1, Page 278</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 6 -->
+                        <div class="faq-item mb-4 rounded-xl overflow-hidden transition-all duration-300 shadow border-transparent" data-faq-index="5">
+                            <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center bg-white hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="faq-content-5">
+                                <span class="pr-8">Shafii school</span>
+                                <span class="faq-icon flex-shrink-0">
+                                    <svg class="w-6 h-6 transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="faq-content-5" class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-gray-50" style="max-height: 0; opacity: 0; transition: max-height 0.3s ease, opacity 0.3s ease;">
+                                <div class="p-5 border-t border-gray-100">
+                                    <p class="text-gray-700">
+                                        If the crescent is sighted in a country, the rule applies to it neighbours, not to those who are far away. (Alfiqhul-Islaamii 2/ 607) (Almajmoou 6/297) Mughnilmuhtaaj 1/422).
+                                    </p>
+                                    <p class="text-gray-700 mt-2">
+                                        Imam Shafii used the following <span style="text-decoration:underline"><strong><em>Athar</em></strong></span> as evidence: Once one of the companions, Kuraib narrated that Um Ul-Fadl has sent him to visit Muaa'wia in As-Shaam (Syria). He said: 'I went to As-Shaam and accomplished the purpose of my visit, and while I was there, Ramadaan started; I had seen the crescent moon on Thursday night, and then went back to Madinah at the end of the month. Ibn Abbaas mentioned the crescent moon asking, 'When did you see the crescent moon?' I replied: 'We saw it on Thursday night.' Ibn Abbaas then asked: 'Kuraib, did you see it?' I answered: 'Yes! And the people had seen it, and they fasted, and so did Muaa'wia.' So Ibn Abbaas said: 'But we had seen it Friday night, so we will fast until we complete thirty days or until we see the crescent moon. I then asked: 'Aren't you satisfied with Muaa'wia's sighting and his fasting?' Ibn Abbaas answered: 'No, this is what the Messenger of Allaah had ordered us to do. [Recorded by Imaam Muslim, and others]
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 7 -->
+                        <div class="faq-item mb-4 rounded-xl overflow-hidden transition-all duration-300 shadow border-transparent" data-faq-index="6">
+                            <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center bg-white hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="faq-content-6">
+                                <span class="pr-8">Hanbali school</span>
+                                <span class="faq-icon flex-shrink-0">
+                                    <svg class="w-6 h-6 transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="faq-content-6" class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-gray-50" style="max-height: 0; opacity: 0; transition: max-height 0.3s ease, opacity 0.3s ease;">
+                                <div class="p-5 border-t border-gray-100">
+                                    <p class="text-gray-700">
+                                        If the sighting of the cresent is confirmed in a place/country, far or near, then, fasting is mandated on all Muslims, the one who sighted it and the one who did not sight it are equal in the ruling. (Kashaafulqinaai 2/353) Almughni Libni Qudaamah 4/338).
+                                    </p>
+                                    <p class="text-gray-700 mt-2">
+                                        This is also the view of Allays, Asshawkaanii and other Shafii followers.
+                                    </p>
+                                    <p class="text-gray-700 mt-2">
+                                        <span style="text-decoration:underline"><em>Reference</em></span>:
+                                    </p>
+                                    <ol class="list-decimal pl-5 mt-2 text-gray-700">
+                                        <li>Kashafu Al Qana'a; Volume 2, Page 353</li>
+                                        <li>Al Mughni; Volume 4, Page 328</li>
+                                        <li>Al Insaaf; Volume 7, Page 335-336</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 8 -->
+                        <div class="faq-item mb-4 rounded-xl overflow-hidden transition-all duration-300 shadow border-transparent" data-faq-index="7">
+                            <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center bg-white hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="faq-content-7">
+                                <span class="pr-8">The majority of the scholars view</span>
+                                <span class="faq-icon flex-shrink-0">
+                                    <svg class="w-6 h-6 transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="faq-content-7" class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-gray-50" style="max-height: 0; opacity: 0; transition: max-height 0.3s ease, opacity 0.3s ease;">
+                                <div class="p-5 border-t border-gray-100">
+                                    <p class="text-gray-700">
+                                        As explained earlier, the Hanafi, Maaliki, Hanbali, and some Shafii schools of thought support the idea of sighting the moon regionally or globally to determine the start of the Islamic month. This belief is based on the interpretation and understanding of Hadiths from Prophet Muhammad (PBUH), his companions, and the Tabieen. <strong>Allah knows best.</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- FAQ Item 9 -->
+                        <div class="faq-item mb-4 rounded-xl overflow-hidden transition-all duration-300 shadow border-transparent" data-faq-index="8">
+                            <button class="faq-toggle w-full text-left p-5 font-semibold flex justify-between items-center bg-white hover:bg-gray-50 transition-colors" aria-expanded="false" aria-controls="faq-content-8">
+                                <span class="pr-8">Is it practical to follow regional moonsighting?</span>
+                                <span class="faq-icon flex-shrink-0">
+                                    <svg class="w-6 h-6 transition-transform duration-300 rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease;">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+                                    </svg>
+                                </span>
+                            </button>
+                            <div id="faq-content-8" class="faq-content overflow-hidden transition-all duration-300 ease-in-out bg-gray-50" style="max-height: 0; opacity: 0; transition: max-height 0.3s ease, opacity 0.3s ease;">
+                                <div class="p-5 border-t border-gray-100">
+                                    <p class="text-gray-700">
+                                        We have to wait until midnight to confirm the sighting of the moon in Malaysia or Indonesia, which determines the start of Eid or Ramadan. However, we can still begin fasting without performing Taraweeh, the optional night prayers.
+                                    </p>
+                                    <p class="text-gray-700 mt-2">
+                                        Sometimes, <strong>we prioritize worldly matters and stay up late for them</strong>, so it's reasonable to wait for information regarding the moon sighting. Ultimately, <strong>Allah knows best.</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="glass-card-dark text-white">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <div>
+            <h3 class="text-xl font-bold mb-4">New Zealand Board of Imams</h3>
+            <p class="mb-4">Serving the Muslim community in New Zealand with guidance, support, and Islamic knowledge.</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-white hover:text-primary-light transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" class="text-white hover:text-primary-light transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" class="text-white hover:text-primary-light transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li><a href="./" class="text-white hover:text-primary-light transition-colors">Home</a></li>
+              <li><a href="./about.html" class="text-white hover:text-primary-light transition-colors">About Us</a></li>
+              <li><a href="./imams.html" class="text-white hover:text-primary-light transition-colors">Meet the Imams</a></li>
+              <li><a href="./announcements.html" class="text-white hover:text-primary-light transition-colors">Announcements</a></li>
+              <li><a href="./events.html" class="text-white hover:text-primary-light transition-colors">Events</a></li>
+              <li><a href="./contact.html" class="text-white hover:text-primary-light transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Resources</h3>
+            <ul class="space-y-2">
+              <li><a href="./moonsighting.html" class="text-white hover:text-primary-light transition-colors">Moonsighting</a></li>
+              <li><a href="./prayer-times.html" class="text-white hover:text-primary-light transition-colors">Prayer Times</a></li>
+              <li><a href="./calendar.html" class="text-white hover:text-primary-light transition-colors">Islamic Calendar</a></li>
+              <li><a href="./resources.html" class="text-white hover:text-primary-light transition-colors">Resources</a></li>
+              <li><a href="./faq.html" class="text-white hover:text-primary-light transition-colors">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4">Contact Us</h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <svg class="w-6 h-6 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+                <span>Auckland, New Zealand</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+                <span>moonsightingnz@gmail.com</span>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+                <span>+64 123 456 789</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm opacity-70">
+          <p>&copy; <span id="current-year"></span> New Zealand Board of Imams. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript files -->
+    <script src="./main.js"></script>
+</body>
+</html>

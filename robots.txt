@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Sitemap: https://nzbi.com/sitemap.xml
+
+# Disallow access to any temporary or development files
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /js/
+Disallow: /css/
+Disallow: /images/
